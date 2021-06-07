@@ -231,7 +231,7 @@ export class PriorityQueueManager<T, E = Error> extends EventEmitter {
 
   onDetachedQueue(listener: (queue: {name: string, queue: AsyncPriorityQueue<T>}) => void): PriorityQueueManager<T, E> {
     this.on(
-      PriorityQueueManager.constants.EVENT_TASK_ERROR,
+      PriorityQueueManager.constants.EVENT_DETACHED_QUEUE,
       listener
     );
     return this;
